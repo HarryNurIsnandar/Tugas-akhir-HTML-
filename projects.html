@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitur — CodeLinker </title>
+  <link rel="icon" type="image/x-icon" href="HNI.ico">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="HNI.PNG" alt="Logo" class="logo">
+        <div>
+          <h1>HNI Projects</h1>
+          <p class="muted">Integrasi GitHub · VS Code · Google Colab</p>
+        </div>
+      </div>
+        <nav class="nav">
+            <a href="index.html">Home</a>
+            <a href="feature.html">Feature</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="login.html" class="btn small">Login</a>
+        </nav>
+    </div>
+  </header>
+
+  <main class="container">
+   <section class="highlight-projects">
+  <h2>Daftar Project</h2>
+  <div class="project-grid">
+    <article class="project">
+      <h3>Prediction Hypertension</h3>
+      <p>Sistem ini menggunakan model IBM Granite-3.3-8B-Instruct ...</p>
+      <a href="#">Lihat di GitHub</a>
+    </article>
+
+    <article class="project">
+      <h3>Brake Disc Heat Detection</h3>
+      <p>Membuat alat pemantau rem cakram kendaraan bermotor berbasis IoT ...</p>
+      <a href="#">Lihat di GitHub</a>
+    </article>
+
+    <article class="project">
+      <h3>IoT Smart Hydroponics</h3>
+      <p>Proyek pengembangan sistem pemantauan tanaman hidroponik ...</p>
+      <a href="#">Lihat di GitHub</a>
+    </article>
+  </div>
+</section>
+
+<section class="add-project">
+  <h2>Tambah Project</h2>
+  
+  <!-- Tombol untuk membuka/menutup form -->
+  <button id="toggleFormBtn" class="btn">+ Tambah Project</button>
+
+  <!-- Form disembunyikan default -->
+  <form id="projectForm" style="display: none; margin-top: 1rem;">
+    <input type="text" id="title" placeholder="Judul Project" required>
+    <input type="number" id="year" placeholder="Tahun" required>
+    <textarea id="description" placeholder="Deskripsi Project" required></textarea>
+    <input type="url" id="repo" placeholder="Link Repository" required>
+    <button type="submit">Tambah</button>
+  </form>
+</section>
+
+<!-- Daftar project ditaruh di bawah -->
+<section class="projects-list">
+  <h2>Daftar Project</h2>
+  <div id="project-list"></div>
+</section>
+
+
+</section>
+
+</main>
+
+  <footer class="site-footer">
+    <p>&copy; 2025 Harry Nur Isnandar. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,567 @@
+/* =========================
+   RESET & BASE
+========================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background: #f9f9f9;
+  color: #222;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+.site-header {
+  background: white;
+  border-bottom: 1px solid #ddd;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  flex-wrap: wrap;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand .logo {
+  width: 42px;
+  height: 42px;
+}
+
+.brand h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.muted {
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.nav {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.nav a {
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nav a:hover {
+  color: #2563eb;
+}
+
+.nav .btn.small {
+  padding: 6px 12px;
+  border-radius: 6px;
+  background: #2563eb;
+  color: white;
+  font-size: 0.85rem;
+  transition: background 0.2s ease;
+}
+
+.nav .btn.small:hover {
+  background: #1e40af;
+}
+
+/* =========================
+   Index Page
+========================= */
+/* Container Flexbox untuk project */
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;        /* biar responsif ke bawah kalau layar sempit */
+  gap: 1.5rem;
+  justify-content: center; /* tengah-tengah */
+}
+
+/* Setiap card project */
+.project-grid article {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  text-align: center;
+  flex: 1 1 250px;       /* fleksibel tapi minimal 250px */
+  max-width: 300px;      /* biar ga terlalu lebar */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover efek */
+.project-grid article:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+/* Gambar di card */
+.project-grid article img {
+  width: 80px;           /* ukuran gambar */
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+/* Judul dan paragraf */
+.project-grid article h3 {
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.project-grid article p {
+  color: #666;
+  font-size: 0.95rem;
+}
+
+
+/* =========================
+   FEATURES / CARD
+========================= */
+.features {
+  padding: 40px 0;
+}
+
+.features h3 {
+  font-size: 1.6rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.feature-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.feature {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 250px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.feature:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.feature h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.feature p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+/* =========================
+   FORM & INPUT
+========================= */
+input[type="text"],
+.contact-form input,
+.contact-form textarea,
+.login-form input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+input[type="text"]:focus,
+.contact-form input:focus,
+.contact-form textarea:focus,
+.login-form input:focus {
+  outline: none;
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37,99,235,0.2);
+}
+
+/* =========================
+   BUTTON
+========================= */
+button,
+.login-form button,
+.contact-form button {
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+button:hover,
+.login-form button:hover,
+.contact-form button:hover {
+  background: #1e40af;
+}
+
+.btn-group {
+  display: flex;
+  gap: 0.5rem;
+}
+
+/* =========================
+   CONTACT INFO
+========================= */
+.contact-info {
+  margin-top: 20px;
+  background: white;
+  padding: 15px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.contact-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.contact-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.contact-label {
+  min-width: 70px;
+  font-weight: bold;
+}
+
+.contact-value a {
+  color: #2563eb;
+  text-decoration: none;
+}
+
+.contact-value a:hover {
+  text-decoration: underline;
+}
+
+/* =========================
+   FOOTER
+========================= */
+.site-footer {
+  background: #111827;
+  border-top: 3px solid #2563eb;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 0.85rem;
+  color: #d1d5db;
+  margin-top: auto;
+}
+
+/* =========================
+   TOGGLE DARK MODE
+========================= */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 26px;
+  margin-left: 1rem;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 26px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2563eb;
+}
+
+input:checked + .slider:before {
+  transform: translateX(24px);
+}
+
+/* DARK MODE */
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark-mode .site-header,
+body.dark-mode .site-footer,
+body.dark-mode .feature,
+body.dark-mode .contact-info {
+  background-color: #1e1e1e;
+  color: #f0f0f0;
+}
+
+body.dark-mode input[type="text"],
+body.dark-mode .contact-form input,
+body.dark-mode .contact-form textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  color: #f0f0f0;
+}
+
+.highlight-projects {
+  padding: 40px 0;
+}
+
+.highlight-projects h2 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.project-grid {
+  display: flex;
+  flex-wrap: wrap;         
+  gap: 1.5rem;
+  justify-content: center; 
+}
+
+.project {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  flex: 1 1 250px;
+  max-width: 320px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.project p {
+  margin-bottom: 1rem;
+  color: #666;
+}
+
+.project img {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 1rem;
+}
+.add-project {
+  padding: 30px;
+  background: #f9fafb;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.add-project h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #1e40af;
+}
+
+.add-project form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.add-project input,
+.add-project textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.add-project button {
+  background: #1e40af;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.add-project button:hover {
+  background: #153075;
+}
+.highlight-projects {
+  padding: 40px 0;
+}
+
+.highlight-projects h2 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-size: 1.6rem;
+  color: #1e40af;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.project {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 280px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+}
+
+.project h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: #1e40af;
+}
+
+.project p {
+  flex: 1;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.project a {
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project a:hover {
+  text-decoration: underline;
+}
+
+.delete-btn {
+  background: #dc2626;
+  color: white;
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.2s ease;
+}
+
+.delete-btn:hover {
+  background: #b91c1c;
+}
+
+.add-project form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px; /* jarak antar input */
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.add-project input,
+.add-project textarea,
+.add-project button {
+  padding: 10px 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-project textarea {
+  min-height: 80px;   /* lebih kecil */
+  resize: vertical;   /* bisa diubah tinggi manual */
+}
+
+.add-project button {
+  background: #2600ff;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-project button:hover {
+  background: #52d163;
+}

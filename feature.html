@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fitur — CodeLinker </title>
+  <link rel="icon" type="image/x-icon" href="HNI.ico">
+  <link rel="stylesheet" href="styles.css" />
+  <script src="script.js"></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand">
+        <img src="HNI.png" alt="Logo HNI" class="logo">
+        <div>
+          <h1>CodeLinker </h1>
+          <p class="muted">Integrasi GitHub · VS Code · Google Colab</p>
+        </div>
+      </div>
+      
+    <nav class="nav">
+      <a href="index.html">Home</a>
+      <a href="feature.html">Feature</a>
+      <a href="projects.html">Projects</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html" class="btn small">Login</a>
+    </nav>
+
+    </div>
+  </header>
+
+  <main class="container features">
+    <h3>Fitur Utama</h3>
+    <div class="feature-grid">
+      <article class="feature">
+        <h4>Sinkronisasi Repo</h4>
+        <p>Akses cepat ke branch, commit, dan pull request di GitHub.</p>
+        <input type="text" id="syncRepoUrl" placeholder="Masukkan URL repo GitHub...">
+        <div class="btn-group">
+          <button onclick="openGitHub('branches')">Branch</button>
+          <button onclick="openGitHub('commits')">Commit</button>
+          <button onclick="openGitHub('pulls')">Pull Request</button>
+        </div>
+      </article>
+
+
+      <article class="feature">
+        <h4>Buka di VS Code Web</h4>
+          <p>Membuka repository GitHub di VS Code versi web.</p>
+          <input type="text" id="vscodeRepoUrl" placeholder="Masukkan URL repo GitHub...">
+          <button onclick="openInVSCode()">Buka di VS Code Web</button>
+      </article>  
+
+
+      <article class="feature">
+        <h4>Buka di Colab</h4>
+        <p>Eksekusi notebook Python di cloud untuk eksperimen cepat.</p>
+        <div class="colab-box">
+          <input type="text" id="repoInput" placeholder="username/repo" />
+          <input type="text" id="fileInput" placeholder="path/file.ipynb" />
+          <button id="colabBtn">🚀 Buka di Colab</button>
+        </div>
+      </article>
+
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; 2025 Harry Nur Isnandar. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>
